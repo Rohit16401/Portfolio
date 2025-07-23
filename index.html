@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rohit Yadav - Full Stack Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Rohit Yadav</div>
+        <div class="nav-center">
+          <ul>
+            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#tech-stack">Tech Stack</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#personal-projects">More Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#testimonials">Inspiration</a></li>
+            <li><a href="#contributions">Contributions</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="nav-right">
+          <button id="theme-toggle" aria-label="Toggle theme">
+            <i class="fas fa-sun"></i>
+            <!-- Default icon, JS will manage -->
+          </button>
+          <button class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero" class="hero-section">
+        <div class="hero-content">
+          <h1>Rohit Yadav</h1>
+          <p class="tagline">
+            Full Stack Developer | Building Scalable & Efficient Web Solutions
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="cta-button">View My Work</a>
+            <a
+              href="impfiles/RohitYadav.pdf"
+              download="Rohit_Yadav_Resume.pdf"
+              class="cta-button resume-button"
+            >
+              <i class="fas fa-download"></i> Download Resume
+            </a>
+          </div>
+          <div class="social-links">
+            <a
+              href="https://www.linkedin.com/in/rohit-ashok-yadav-84854a245/"
+              target="_blank"
+              aria-label="LinkedIn"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a
+              href="https://github.com/Rohit16401"
+              target="_blank"
+              aria-label="GitHub"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="mailto:rohitashokyadav093@gmail.com" aria-label="Email"
+              ><i class="fas fa-envelope"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="content-section">
+        <h2>About Me</h2>
+        <div class="about-container">
+          <div class="about-image-container">
+            <img
+              src="images/RohitProfile.png"
+              alt="Rohit Yadav"
+              class="profile-photo"
+            />
+          </div>
+          <div class="about-text-container">
+            <p>
+              A passionate and results-oriented Full Stack Developer holding a
+              Master's degree in Computer Applications. I specialize in building
+              robust and scalable web applications using the .NET ecosystem and
+              modern frontend frameworks like React.
+            </p>
+            <p>
+              I possess a proven ability in developing efficient RESTful APIs,
+              designing intuitive user interfaces, and optimizing database
+              interactions with Entity Framework Core. My strong command over
+              C#, SQL, JavaScript/TypeScript, and React.js enables effective
+              end-to-end development.
+            </p>
+            <p>
+              I am adept at applying SOLID principles and design patterns to
+              create clean, maintainable, and testable code. I thrive in
+              collaborative environments, am a quick learner, and am always
+              eager to tackle new challenges and technologies.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="content-section">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Languages</h3>
+            <ul>
+              <li><i class="fas fa-code"></i> C#</li>
+              <li><i class="fas fa-database"></i> SQL / T-SQL</li>
+              <li><i class="fab fa-js-square"></i> JavaScript (ES6+)</li>
+              <li><i class="fas fa-code"></i> TypeScript</li>
+              <li><i class="fab fa-html5"></i> HTML5</li>
+              <li><i class="fab fa-css3-alt"></i> CSS3</li>
+              <li><i class="fab fa-java"></i> Core Java</li>
+              <li><i class="fab fa-python"></i> Core Python</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Backend & Frameworks</h3>
+            <ul>
+              <li><i class="fas fa-cogs"></i> .NET Core / ASP.NET Core</li>
+              <li>
+                <i class="fas fa-network-wired"></i> Web API / RESTful Services
+              </li>
+              <li><i class="fas fa-layer-group"></i> MVC Architecture</li>
+              <li>
+                <i class="fas fa-project-diagram"></i> Entity Framework Core
+              </li>
+              <li><i class="fas fa-database"></i> SQL Server</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Frontend & Libraries</h3>
+            <ul>
+              <li><i class="fab fa-react"></i> React.js</li>
+              <li><i class="fas fa-palette"></i> Material-UI</li>
+              <li><i class="fab fa-html5"></i> HTML5</li>
+              <li><i class="fab fa-css3-alt"></i> CSS3 / Flexbox / Grid</li>
+              <li><i class="fab fa-js-square"></i> JavaScript (DOM)</li>
+              <li><i class="fas fa-mobile-alt"></i> Responsive Design</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Tools & Platforms</h3>
+            <ul>
+              <li>
+                <i class="fas fa-laptop-code"></i> Visual Studio / VS Code
+              </li>
+              <li><i class="fas fa-code-branch"></i> Git & GitHub</li>
+              <li><i class="fas fa-file-code"></i> Swagger / OpenAPI</li>
+              <li><i class="fas fa-database"></i> SSMS</li>
+              <li><i class="fas fa-tools"></i> Eclipse</li>
+              <li><i class="fab fa-docker"></i> Docker (Basic)</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Concepts & Principles</h3>
+            <ul>
+              <li><i class="fas fa-lightbulb"></i> SOLID Principles</li>
+              <li><i class="fas fa-sitemap"></i> Design Patterns</li>
+              <li><i class="fas fa-shield-alt"></i> OOP</li>
+              <li><i class="fas fa-sync-alt"></i> Async Programming</li>
+              <li><i class="fas fa-users-cog"></i> Agile Methodologies</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="tech-stack" class="content-section">
+        <h2>My Favorite Tech Stack</h2>
+        <p class="section-subtitle">
+          Technologies I enjoy working with most for building robust
+          applications.
+        </p>
+        <div class="tech-stack-grid">
+          <div class="tech-item">
+            <i class="fas fa-code tech-icon csharp-icon"></i>
+            <span>C# & .NET Core</span>
+          </div>
+          <div class="tech-item">
+            <i class="fab fa-react tech-icon react-icon"></i>
+            <span>React.js</span>
+          </div>
+          <div class="tech-item">
+            <i class="fas fa-database tech-icon sql-icon"></i>
+            <span>SQL Server</span>
+          </div>
+          <div class="tech-item">
+            <i class="fas fa-file-code tech-icon ts-icon"></i>
+            <span>TypeScript</span>
+          </div>
+          <div class="tech-item">
+            <i class="fas fa-cloud tech-icon azure-icon"></i>
+            <span>Azure (Learning)</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="content-section">
+        <h2>Professional Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">May 2024 – April 2025 (Ongoing)</div>
+            <div class="timeline-content">
+              <h3>Full Stack Developer Intern</h3>
+              <h4>SoftTech Works, Pune, Maharashtra</h4>
+              <ul>
+                <li>
+                  Developing and maintaining RESTful APIs using ASP.NET Core for
+                  various business modules.
+                </li>
+                <li>
+                  Building dynamic and responsive user interfaces with React.js
+                  and Material-UI.
+                </li>
+                <li>
+                  Optimizing database performance with Entity Framework Core
+                  queries.
+                </li>
+                <li>
+                  Collaborating in an Agile team on system architecture,
+                  testing, and code reviews.
+                </li>
+                <li>
+                  Applying SOLID principles and design patterns for clean,
+                  maintainable code.
+                </li>
+                <li>
+                  Utilizing Git & GitHub for version control and collaborative
+                  development.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="content-section">
+        <h2>Featured Projects</h2>
+        <p class="section-subtitle">
+          Key projects showcasing applied skills and problem-solving.
+        </p>
+        <div class="projects-grid">
+          <div class="project-card">
+            <img
+              src="images/image.png"
+              alt="ERP Software Screenshot"
+              class="project-image"
+            />
+            <div class="project-card-content">
+              <h3>ERP Software Solution for Foundry Manufacturing</h3>
+              <p class="project-association">
+                Associated with SoftTech Works | (May 2024 – Mar 2025)
+              </p>
+              <p class="project-description">
+                Contributed to an ERP system for the foundry industry, focusing
+                on backend API development and frontend component design to
+                enhance operational efficiency.
+              </p>
+              <h4>Key Features:</h4>
+              <ul>
+                <li>
+                  Developed 10+ RESTful APIs (ASP.NET Core) for Inventory,
+                  Production Planning.
+                </li>
+                <li>
+                  Designed 20+ reusable UI components (React, Material-UI) with
+                  Atomic Design.
+                </li>
+                <li>
+                  Achieved sub-second API response times for critical
+                  operations.
+                </li>
+              </ul>
+              <h4>Challenges & Solutions:</h4>
+              <p>
+                Optimized complex SQL queries, reducing load times by 40% via
+                indexing and refactoring.
+              </p>
+              <p class="project-tech">
+                <strong>Tech:</strong> C#, ASP.NET Core, EF Core, SQL Server,
+                React, Material-UI, SOLID, Design Patterns, Swagger, Git, GitHub
+              </p>
+              <div class="project-links">
+                <a
+                  href="https://github.com/Rohit16401/foundry-ERP"
+                  target="_blank"
+                  class="project-link repo-link"
+                  ><i class="fab fa-github"></i> View Code
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <img
+              src="images/Dashboard.png"
+              alt="Home & Apparel Store Screenshot"
+              class="project-image"
+            />
+            <div class="project-card-content">
+              <h3>Home & Apparel Store – Custom Management Solution</h3>
+              <p class="project-association">
+                Associated with SoftTech Works | (Sept 2024 – Dec 2024)
+              </p>
+              <p class="project-description">
+                Developed a bespoke solution for a local home & apparel store,
+                covering inventory, sales, and reporting to streamline
+                operations.
+              </p>
+              <h4>Key Features:</h4>
+              <ul>
+                <li>
+                  Built RESTful APIs (ASP.NET Core) for products, customers,
+                  orders.
+                </li>
+                <li>
+                  Created 15+ responsive UI screens (React, Material-UI,
+                  TypeScript).
+                </li>
+                <li>
+                  Reduced code duplication by ~25% with component-based design.
+                </li>
+              </ul>
+              <h4>Challenges & Solutions:</h4>
+              <p>
+                Managed React state effectively using Context API for shared
+                data (auth, cart).
+              </p>
+              <p class="project-tech">
+                <strong>Tech:</strong> C#, ASP.NET Core, EF Core, SQL Server,
+                React.js, Material-UI, TypeScript, REST APIs, Git
+              </p>
+              <div class="project-links">
+                <a
+                  href="https://github.com/Rohit16401/ERP"
+                  target="_blank"
+                  class="project-link repo-link"
+                  ><i class="fab fa-github"></i> View Code</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="personal-projects" class="content-section">
+        <h2>Personal Projects & Experiments</h2>
+        <p class="section-subtitle">
+          Side projects built for learning and exploration.
+        </p>
+        <div class="projects-grid">
+          <div class="project-card simple-card">
+            <div class="project-card-content">
+              <h3>Mini_TradingApp_POC</h3>
+              <p class="project-description">
+                This mini-project is a proof of concept for a candlestick chart
+                visualization tool. It is designed to demonstrate the basic
+                functionality of rendering financial data, such as price bars,
+                support/resistance levels, and volume profile indicators, using
+                the Chart.js library.
+              </p>
+              <p class="project-tech">
+                <strong>Tech:</strong> WPF (DotNet), Chat.js(Library),
+                HTML,CSS,JavaScript,C#
+              </p>
+              <div class="project-links">
+                <!-- <a href="#" target="_blank" class="project-link demo-link"><i class="fas fa-external-link-alt"></i> Live Demo</a> -->
+                <a
+                  href="https://github.com/Rohit16401/Mini_TradingApp_POC"
+                  target="_blank"
+                  class="project-link repo-link"
+                  ><i class="fab fa-github"></i> View Code</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- <div class="project-card simple-card">
+            <div class="project-card-content">
+              <h3>Weather API Data Fetcher (Example)</h3>
+              <p class="project-description">
+                A small Python script that fetches weather data from a public
+                API based on city input and displays key information. Built to
+                understand API integration and data parsing in Python.
+              </p>
+              <p class="project-tech">
+                <strong>Tech:</strong> Python, Requests, JSON
+              </p>
+              <div class="project-links">
+                <a href="#" target="_blank" class="project-link repo-link"
+                  ><i class="fab fa-github"></i> View Code</a
+                >
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </section>
+
+      <section id="education" class="content-section">
+        <h2>Education</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">Nov 2022 – June 2024</div>
+            <div class="timeline-content">
+              <h3>Master of Computer Application (MCA)</h3>
+              <h4>Alard Institute of Management Sciences, Pune, Maharashtra</h4>
+              <p>CGPA: 8.2</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">June 2019 – May 2022</div>
+            <div class="timeline-content">
+              <h3>Bachelor of Computer Application (BCA)</h3>
+              <h4>
+                Vasantdada Patil Institute of Management Sciences and Research,
+                Sangli , Maharashtra
+              </h4>
+              <p>Percentage: 84.73%</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">March 2018</div>
+            <div class="timeline-content">
+              <h3>Higher Secondary Certificate (HSC - Class XII)</h3>
+              <h4>
+                Smt. Kasturbai Walchand College of Arts ,Science and Commerce,
+                Sangli Maharashtra
+              </h4>
+              <p>Stream: Science | Percentage: 65.38%</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">March 2016</div>
+            <div class="timeline-content">
+              <h3>Secondary School Certificate (SSC - Class X)</h3>
+              <h4>
+                Shantiniketan Dadukaka Bhide English Medium School, Sangli,
+                Maharashtra
+              </h4>
+              <p>Percentage: 91.00%</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials" class="content-section">
+        <h2>Inspirations</h2>
+        <p class="section-subtitle">What drives me to be who I am.</p>
+        <div class="testimonials-container">
+          <div class="testimonial-card">
+            <blockquote>
+              <p>"यत् भावो तत् भवति"</p>
+            </blockquote>
+            <cite>You become what you think. You are what you believe</cite>
+          </div>
+          <!-- <div class="testimonial-card">
+            <blockquote>
+              <p>
+                "Working with Rohit on the ERP project was a great experience.
+                His frontend components were well-structured, responsive, and he
+                was always open to feedback."
+              </p>
+            </blockquote>
+            <cite
+              >– Jane Smith, Senior Developer @ SoftTech Works (Example)</cite
+            >
+          </div> -->
+        </div>
+      </section>
+
+      <section id="contributions" class="content-section">
+        <h2>Contributions & Certifications</h2>
+        <div class="contributions-grid">
+          <div class="contribution-item">
+            <h3><i class="fas fa-certificate"></i> Certifications</h3>
+            <ul class="certifications-list">
+              <li>.NET Beginner Level Course Certificate by Great Learning.</li>
+              <li>
+                Certificate for completion of C++ Training by Spoken Tutorial
+                (IIT Bombay).
+              </li>
+            </ul>
+          </div>
+          <div class="contribution-item">
+            <h3><i class="fab fa-github"></i> GitHub & Open Source</h3>
+            <p>
+              Actively maintain personal projects on GitHub, focusing on .NET
+              and React. Exploring contributions to open-source libraries.
+            </p>
+            <a
+              href="https://github.com/Rohit16401"
+              target="_blank"
+              class="contribution-link"
+              >View My GitHub Profile</a
+            >
+          </div>
+          <!-- <div class="contribution-item">
+            <h3><i class="fas fa-pen-alt"></i> Blog / Articles</h3>
+            <p>
+              Currently focusing on project development. Plan to share insights
+              on .NET Core and React development in the future.
+            </p>
+          </div> -->
+        </div>
+      </section>
+
+      <section id="contact" class="content-section">
+        <h2>Get In Touch</h2>
+        <p class="section-subtitle">
+          I'm actively seeking full-time opportunities as a Full Stack, Backend,
+          or Frontend Developer. <br />
+          I'd love to hear about exciting roles or projects. Let's connect!
+        </p>
+        <div class="contact-methods">
+          <a href="mailto:rohitashokyadav093@gmail.com" class="contact-button"
+            ><i class="fas fa-envelope"></i> Email Me</a
+          >
+          <a
+            href="https://www.linkedin.com/in/rohit-ashok-yadav-84854a245/"
+            target="_blank"
+            class="contact-button"
+            ><i class="fab fa-linkedin"></i> Connect on LinkedIn</a
+          >
+          <p><i class="fas fa-map-marker-alt"></i> Pune, Maharashtra, India</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© <span id="currentYear"></span> Rohit Yadav. All rights reserved.</p>
+      <p>Crafted with HTML, CSS, and JavaScript.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
