@@ -567,6 +567,8 @@ body:not(.light-theme) .azure-icon { color: #0078D4; } /* Keep same if good cont
     max-width: 800px;
     margin: 40px auto;
 }
+
+/* Central vertical line */
 .timeline::after {
     content: '';
     position: absolute;
@@ -578,12 +580,28 @@ body:not(.light-theme) .azure-icon { color: #0078D4; } /* Keep same if good cont
     margin-left: -1px;
     transition: background-color var(--transition-speed) ease;
 }
+
+/* Each timeline item */
 .timeline-item {
     padding: 15px 40px;
     position: relative;
     width: 50%;
     margin-bottom: 40px;
+    box-sizing: border-box;
 }
+
+/* Alternate item positioning */
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: left;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    text-align: left;
+}
+
+/* Dots on the central line */
 .timeline-dot {
     position: absolute;
     width: 14px;
@@ -596,9 +614,17 @@ body:not(.light-theme) .azure-icon { color: #0078D4; } /* Keep same if good cont
     box-shadow: 0 0 0 3px var(--accent-primary);
     transition: background-color var(--transition-speed) ease, border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
 }
-.timeline-item:nth-child(odd) .timeline-dot { right: -8px; }
-.timeline-item:nth-child(even) .timeline-dot { left: -8px; }
 
+/* Dot alignment on the line */
+.timeline-item:nth-child(odd) .timeline-dot {
+    right: -7px;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+    left: -7px;
+}
+
+/* Timeline date style */
 .timeline-date {
     padding: 7px 14px;
     background-color: var(--timeline-date-bg);
@@ -611,6 +637,8 @@ body:not(.light-theme) .azure-icon { color: #0078D4; } /* Keep same if good cont
     font-size: 0.8rem;
     transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease, border-color var(--transition-speed) ease;
 }
+
+/* Content card style */
 .timeline-content {
     padding: 25px;
     background-color: var(--card-bg);
@@ -620,9 +648,46 @@ body:not(.light-theme) .azure-icon { color: #0078D4; } /* Keep same if good cont
     box-shadow: 0 5px 15px var(--shadow-light);
     transition: background-color var(--transition-speed) ease, border-color var(--transition-speed) ease;
 }
-.timeline-content h3 { font-size: 1.35rem; margin-bottom: 5px; color: var(--heading-text); }
-.timeline-content h4 { font-size: 1rem; font-style: normal; font-weight: 400; color: var(--secondary-text); margin-bottom: 10px; }
-.timeline-content ul li { font-size: 0.95rem; color: var(--primary-text); }
+
+.timeline-content h3 {
+    font-size: 1.35rem;
+    margin-bottom: 5px;
+    color: var(--heading-text);
+}
+
+.timeline-content h4 {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--secondary-text);
+    margin-bottom: 10px;
+}
+
+.timeline-content ul li {
+    font-size: 0.95rem;
+    color: var(--primary-text);
+}
+
+/* Responsive design for mobile */
+@media screen and (max-width: 768px) {
+    .timeline::after {
+        left: 20px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        text-align: left !important;
+        padding-left: 50px;
+        padding-right: 25px;
+    }
+
+    .timeline-dot {
+        left: 20px !important;
+        right: auto !important;
+    }
+}
+
 
 /* --- PROJECTS SECTION --- */
 .projects-grid {
@@ -630,32 +695,45 @@ body:not(.light-theme) .azure-icon { color: #0078D4; } /* Keep same if good cont
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     gap: 30px;
 }
+
 .project-card {
     background-color: var(--card-bg);
     border-radius: var(--border-radius);
     border: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
-    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease, border-color var(--transition-speed) ease, background-color var(--transition-speed) ease;
+    transition: transform var(--transition-speed) ease, 
+                box-shadow var(--transition-speed) ease, 
+                border-color var(--transition-speed) ease, 
+                background-color var(--transition-speed) ease;
     overflow: hidden;
 }
+
 .project-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 10px 30px var(--shadow-medium);
     border-color: var(--accent-primary);
 }
+
 .project-image {
     width: 100%;
     height: 220px;
     object-fit: cover;
 }
+
 .project-card-content {
     padding: 25px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
-.project-card h3 { font-size: 1.45rem; margin-top: 0; color: var(--heading-text); }
+
+.project-card h3 {
+    font-size: 1.45rem;
+    margin-top: 0;
+    color: var(--heading-text);
+}
+
 .project-card .project-association {
     font-size: 0.85rem;
     color: var(--secondary-text);
@@ -663,16 +741,33 @@ body:not(.light-theme) .azure-icon { color: #0078D4; } /* Keep same if good cont
     font-style: italic;
     margin-top: -5px;
 }
+
 .project-card p.project-description {
     font-size: 0.95rem;
     margin-bottom: 15px;
     flex-grow: 1;
     color: var(--primary-text);
 }
-.project-card h4 { font-size: 1.1rem; margin-top: 15px; margin-bottom: 8px; font-weight: 500; color: var(--accent-primary); }
-.project-card ul { padding-left: 20px; margin-bottom: 15px; }
-.project-card ul li { font-size: 0.9rem; color: var(--primary-text); }
 
+.project-card h4 {
+    font-size: 1.1rem;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--accent-primary);
+}
+
+.project-card ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.project-card ul li {
+    font-size: 0.9rem;
+    color: var(--primary-text);
+}
+
+/* --- TECHNOLOGIES SECTION INSIDE CARD --- */
 .project-card .project-tech {
     font-size: 0.9rem;
     color: var(--secondary-text);
@@ -681,7 +776,14 @@ body:not(.light-theme) .azure-icon { color: #0078D4; } /* Keep same if good cont
     border-top: 1px solid var(--border-color);
     transition: border-color var(--transition-speed) ease;
 }
-.project-card .project-tech strong { color: var(--accent-primary); font-weight: 500; transition: color var(--transition-speed) ease;}
+
+.project-card .project-tech strong {
+    color: var(--accent-primary);
+    font-weight: 500;
+    transition: color var(--transition-speed) ease;
+}
+
+/* --- PROJECT LINKS --- */
 .project-links {
     margin-top: auto;
     padding-top: 15px;
@@ -689,6 +791,7 @@ body:not(.light-theme) .azure-icon { color: #0078D4; } /* Keep same if good cont
     gap: 12px;
     align-items: center;
 }
+
 .project-link {
     display: inline-flex;
     align-items: center;
@@ -697,37 +800,79 @@ body:not(.light-theme) .azure-icon { color: #0078D4; } /* Keep same if good cont
     font-weight: 500;
     padding: 8px 15px;
     border-radius: var(--border-radius);
-    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+    transition: background-color var(--transition-speed) ease, 
+                color var(--transition-speed) ease, 
+                border-color var(--transition-speed) ease;
 }
-.project-link i { font-size: 1em; }
 
+.project-link i {
+    font-size: 1em;
+}
+
+/* --- DEMO LINK STYLE --- */
 .project-link.demo-link {
     background-color: var(--accent-primary);
     color: var(--primary-bg);
 }
+
 body.light-theme .project-link.demo-link {
-     color: var(--light-heading-text);
+    color: var(--light-heading-text);
 }
+
 .project-link.demo-link:hover {
     background-color: var(--accent-hover);
     color: var(--primary-bg);
 }
+
 body.light-theme .project-link.demo-link:hover {
-     color: var(--light-heading-text);
+    color: var(--light-heading-text);
 }
 
+/* --- REPO LINK STYLE --- */
 .project-link.repo-link {
     background-color: var(--project-link-repo-bg);
     color: var(--project-link-repo-text);
     border: 1px solid var(--project-link-repo-border);
 }
+
 .project-link.repo-link:hover {
-     background-color: var(--project-link-repo-hover-bg);
-     color: var(--project-link-repo-hover-text);
-     border-color: var(--project-link-repo-hover-bg);
+    background-color: var(--project-link-repo-hover-bg);
+    color: var(--project-link-repo-hover-text);
+    border-color: var(--project-link-repo-hover-bg);
 }
-.project-card.simple-card .project-card-content { padding-bottom: 0; }
-.project-card.simple-card .project-tech { border-top: none; padding-top: 5px; margin-bottom: 15px; }
+
+/* --- SIMPLE CARD (used in Personal Projects) --- */
+.project-card.simple-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* Adjust padding and layout in simple cards */
+.project-card.simple-card .project-card-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 0;
+}
+
+/* Keep consistent spacing and alignment for links */
+.project-card.simple-card .project-links {
+    margin-top: auto;
+    padding-top: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Remove extra divider line in simple-card tech section */
+.project-card.simple-card .project-tech {
+    border-top: none;
+    padding-top: 5px;
+    margin-bottom: 15px;
+}
 
 /* --- TESTIMONIALS --- */
 .testimonials-container {
